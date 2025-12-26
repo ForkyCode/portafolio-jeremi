@@ -164,7 +164,7 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <div className="hidden md:flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a
                   href="/CVH-Jeremi%20Chac%C3%B3n(Ingles).pdf"
                   download
@@ -200,6 +200,22 @@ export default function Portfolio() {
                 </div>
               </div>
             </RevealOnScroll>
+          </div>
+
+          <div className="flex md:hidden flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/CVH-Jeremi%20Chac%C3%B3n(Ingles).pdf"
+              download
+              className="px-8 py-3 bg-[#7A1CAC] text-white rounded-full font-semibold hover:bg-[#651590] transition-all hover:scale-105 shadow-lg shadow-[#7A1CAC]/30 flex items-center justify-center gap-2"
+            >
+              <Download size={20} /> Download CV
+            </a>
+            <a
+              href="#projects"
+              className="w-full sm:w-auto text-center px-8 py-3 border-2 border-[#EBD3F8] text-[#EBD3F8] rounded-full font-semibold hover:bg-[#EBD3F8] hover:text-[#2E073F] transition-all hover:scale-105"
+            >
+              View Projects
+            </a>
           </div>
         </div>
       </section>
