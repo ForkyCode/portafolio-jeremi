@@ -137,7 +137,7 @@ export default function Portfolio() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#7A1CAC] rounded-full filter blur-[150px] opacity-20 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#EBD3F8] rounded-full filter blur-[150px] opacity-10"></div>
 
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-8 lg:gap-12 items-center relative z-10">
           <div className="text-center md:text-left">
             <RevealOnScroll direction="left">
               <h2 className="text-[#EBD3F8]/80 font-medium text-lg mb-1">Hello, I'm</h2>
@@ -166,7 +166,7 @@ export default function Portfolio() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a
-                  href="/assets/CVH-Jeremi Chacón(Ingles).pdf"
+                  href="/CVH-Jeremi%20Chac%C3%B3n(Ingles).pdf"
                   download
                   className="px-8 py-3 bg-[#7A1CAC] text-white rounded-full font-semibold hover:bg-[#651590] transition-all hover:scale-105 shadow-lg shadow-[#7A1CAC]/30 flex items-center justify-center gap-2"
                 >
@@ -184,13 +184,13 @@ export default function Portfolio() {
 
           <div className="flex justify-center md:justify-end">
             <RevealOnScroll direction="right" delay={200}>
-              <div className="relative w-72 h-72 md:w-[450px] md:h-[450px] rounded-3xl p-2 border-2 border-[#7A1CAC]/30 backdrop-blur-sm bg-white/5">
+              <div className="relative w-72 h-72 md:w-[380px] md:h-[380px] lg:w-[450px] lg:h-[450px] rounded-3xl p-2 border-2 border-[#7A1CAC]/30 backdrop-blur-sm bg-white/5">
                 <img
-                  src="/assets/IMG_20251121_124503.jpg"
+                  src="/Imagenes/Jeremi-Chacon.jpg"
                   alt="Jeremi Chacón"
                   className="w-full h-full object-cover rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-lg flex items-center gap-3 animate-bounce">
+                <div className="absolute -bottom-6 -left-6 md:bottom-2 md:left-2 lg:-bottom-6 lg:-left-6 bg-white p-5 rounded-2xl shadow-lg flex items-center gap-3 animate-bounce">
                   <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></div>
                   <div>
                     <p className="text-[#2E073F] font-bold text-sm leading-tight">
@@ -283,17 +283,17 @@ export default function Portfolio() {
                       View Live Site <ExternalLink size={18} />
                     </a>
                   </div>
-                  <div className="space-y-4">
+                  <div className="relative flex flex-col items-center gap-6 lg:gap-8">
                     <img
-                      src="/assets/Macbook-Air-simplycodia.com.jpg"
+                      src="/Imagenes/Simplycodia.com%20desktop.png"
                       alt="SimplyCodia Desktop"
-                      className="rounded-xl shadow-2xl border border-gray-200 hover:scale-[1.02] transition-transform duration-500"
+                      className="w-full max-w-[520px] rounded-xl shadow-2xl border border-gray-200 hover:scale-[1.02] transition-transform duration-500"
                     />
-                    <div className="flex justify-center">
+                    <div className="flex justify-center md:absolute md:bottom-[-24px] md:right-6 md:w-[180px] lg:w-[200px]">
                       <img
-                        src="/assets/iPhone-13-PRO-simplycodia.com.png"
+                        src="/Imagenes/simplycodia.com%20mobile.png"
                         alt="SimplyCodia Mobile"
-                        className="w-1/3 rounded-[2rem] shadow-xl border-4 border-gray-800"
+                        className="w-1/3 md:w-full rounded-[2rem] shadow-xl border-4 border-gray-800"
                       />
                     </div>
                   </div>
@@ -327,17 +327,17 @@ export default function Portfolio() {
                       View Live Site <ExternalLink size={18} />
                     </a>
                   </div>
-                  <div className="space-y-4">
+                  <div className="relative flex flex-col items-center gap-6 lg:gap-8">
                     <img
-                      src="/assets/Macbook-Air-birdinginpanama.com.jpg"
+                      src="/Imagenes/Birdinginpanama%20Desktop.jfif"
                       alt="Birding Desktop"
-                      className="rounded-xl shadow-2xl border border-gray-200 hover:scale-[1.02] transition-transform duration-500"
+                      className="w-full max-w-[520px] rounded-xl shadow-2xl border border-gray-200 hover:scale-[1.02] transition-transform duration-500"
                     />
-                    <div className="flex justify-center">
+                    <div className="flex justify-center md:absolute md:bottom-[-24px] md:right-6 md:w-[180px] lg:w-[200px]">
                       <img
-                        src="/assets/iPhone-13-PRO-birdinginpanama.com.png"
+                        src="/Imagenes/BirdingInpanama%20Mobile.jfif"
                         alt="Birding Mobile"
-                        className="w-1/3 rounded-[2rem] shadow-xl border-4 border-gray-800"
+                        className="w-1/3 md:w-full rounded-[2rem] shadow-xl border-4 border-gray-800"
                       />
                     </div>
                   </div>
