@@ -91,9 +91,43 @@ export default function Portfolio() {
         }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-white tracking-wider">
-            JEREMI<span className="text-[#EBD3F8]">.DEV</span>
+          <a
+            href="/"
+            aria-label="Home"
+            className="group flex items-center gap-3 text-white tracking-[0.18em]"
+          >
+            <span className="relative flex h-5 w-5 items-center justify-center rounded-full border border-white/50 shadow-[0_0_12px_rgba(122,28,172,0.4)] transition-transform duration-200 group-hover:scale-[1.05]">
+              <span className="h-2 w-2 rounded-full bg-white/80 shadow-[0_0_10px_rgba(235,211,248,0.7)]" />
+            </span>
+            <span className="text-sm font-semibold uppercase transition-colors duration-200 group-hover:text-[#EBD3F8]">
+              Jeremi<span className="text-[#EBD3F8] group-hover:text-white">.dev</span>
+            </span>
           </a>
+
+          {/*
+          <a
+            href="/"
+            aria-label="Home"
+            className="group flex items-center gap-3 text-white tracking-[0.18em]"
+          >
+            <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white/50 shadow-[0_0_12px_rgba(122,28,172,0.4)] transition-transform duration-200 group-hover:scale-[1.05]">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-3 w-3 text-white/90"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              >
+                <path d="M15 6h-3a4 4 0 0 0-4 4v8" />
+                <path d="M8 18c0 0 1.5 0 3 0a4 4 0 0 0 4-4v-1" />
+              </svg>
+            </span>
+            <span className="text-sm font-semibold uppercase transition-colors duration-200 group-hover:text-[#EBD3F8]">
+              Jeremi<span className="text-[#EBD3F8] group-hover:text-white">.dev</span>
+            </span>
+          </a>
+          */}
 
           <div className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
@@ -115,29 +149,31 @@ export default function Portfolio() {
           </button>
         </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden bg-[#2E073F] absolute w-full border-t border-[#7A1CAC]">
-            <div className="flex flex-col px-6 py-4 space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-white hover:text-[#EBD3F8]"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
+        <div
+          className={`md:hidden bg-[#2E073F] absolute left-0 right-0 top-full border-t border-[#7A1CAC] transition-transform duration-300 ease-out ${
+            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          } ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        >
+          <div className="flex flex-col items-center px-6 py-4 space-y-4 text-center">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-white hover:text-[#EBD3F8]"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
-        )}
+        </div>
       </nav>
 
       <section id="home" className="min-h-screen flex items-center justify-center bg-[#2E073F] pt-28 pb-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#7A1CAC] rounded-full filter blur-[150px] opacity-20 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#EBD3F8] rounded-full filter blur-[150px] opacity-10"></div>
 
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-8 lg:gap-12 items-center relative z-10">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-12 lg:gap-12 items-center relative z-10">
           <div className="text-center md:text-left">
             <RevealOnScroll direction="left">
               <h2 className="text-[#EBD3F8]/80 font-medium text-lg mb-1">Hello, I'm</h2>
@@ -184,11 +220,11 @@ export default function Portfolio() {
 
           <div className="flex justify-center md:justify-end">
             <RevealOnScroll direction="right" delay={200}>
-              <div className="relative w-72 h-72 md:w-[380px] md:h-[380px] lg:w-[450px] lg:h-[450px] rounded-3xl p-2 border-2 border-[#7A1CAC]/30 backdrop-blur-sm bg-white/5">
+              <div className="relative w-72 h-72 md:w-[380px] md:h-[380px] lg:w-[450px] lg:h-[450px] 2xl:w-[520px] 2xl:h-[520px] rounded-3xl p-2 border-2 border-[#7A1CAC]/30 backdrop-blur-sm bg-white/5">
                 <img
-                  src="/Imagenes/Jeremi-Chacon.jpg"
+                  src="/Imagenes/Fotocomponentehero.png"
                   alt="Jeremi Chacón"
-                  className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-full object-cover object-[50%_28%] rounded-2xl shadow-2xl"
                 />
                 <div className="absolute -bottom-6 -left-6 md:bottom-2 md:left-2 lg:-bottom-6 lg:-left-6 bg-white p-5 rounded-2xl shadow-lg flex items-center gap-3 animate-bounce">
                   <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></div>
@@ -489,7 +525,7 @@ export default function Portfolio() {
                 <div className="space-y-4">
                   <div className="p-5 bg-[#FDFBFD] border border-gray-100 rounded-xl hover:border-[#7A1CAC] hover:shadow-md transition-all">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
-                      <h4 className="text-[#2E073F] font-bold text-lg">World Robot Olympiad (WRO Panamá)</h4>
+                      <h4 className="text-[#2E073F] font-bold text-lg">World Robot Olympiad (WRO Panamá 2024)</h4>
                       <span className="text-xs font-bold text-[#7A1CAC] bg-[#7A1CAC]/10 px-3 py-1 rounded-full whitespace-nowrap">Robotics Instructor</span>
                     </div>
                     <p className="text-sm text-gray-600 mb-3 leading-relaxed">Coached and mentored students in robotics competitions at an international level.</p>
@@ -556,7 +592,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="p-2 bg-[#7A1CAC]/20 rounded-lg text-[#7A1CAC]"><MapPin size={20} /></div>
-                    <span className="text-lg">Panama, Panama City</span>
+                    <span className="text-lg">Panama City - Panamá</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="p-2 bg-[#7A1CAC]/20 rounded-lg text-[#7A1CAC]"><Github size={20} /></div>
